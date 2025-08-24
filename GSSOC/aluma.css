@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: black;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark-mode .navbar {
+  background: #1e1e1e;
+}
+
+.navbar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s, background 0.3s;
+}
+
+body.dark-mode .navbar a {
+  color: white;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: white;
+  background: #ff6600;
+}
+
+#theme-toggle {
+  margin-right: 15px;
+  padding: 8px 15px;
+  border: none;
+  background: #ff6600;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#theme-toggle:hover {
+  background: #e05500;
+}
+/* Basic navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    background: orange;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Dark mode toggle button */
+#mode-toggle {
+    background: orange;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+/* Dark mode styles */
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark .navbar {
+    background: #1f1f1f;
+}
+
+body.dark a {
+    color: white;
+}

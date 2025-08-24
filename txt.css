@@ -1,0 +1,90 @@
+/* Reset & Scroll */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #f5f9f6;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f3c2f;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #0f3c2f;
+  font-weight: 500;
+  transition: 0.3s ease;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+}
+.nav-links a:hover {
+  background-color: #dff3e7;
+  color: #0b2a21;
+}
+.toggle-btn {
+  background: #0f3c2f;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+}
+.section-hero {
+  background-color: #f9fefb;
+}
+.section-about {
+  background-color: #ffffff;
+}
+.section-features {
+  background-color: #f0f9f3;
+}
+.section-footer {
+  background-color: #0f3c2f;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+.dark-mode .nav-links a {
+  color: white;
+}
+.dark-mode .nav-links a:hover {
+  background-color: #333;
+}

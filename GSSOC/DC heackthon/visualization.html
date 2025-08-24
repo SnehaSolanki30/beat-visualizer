@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beat Detection & Rhythm Visualizer</title>
+  <link rel="stylesheet" href="visualizer.css">
+</head>
+<body>
+  <h1>🎵 Beat Detection & <span class="highlight-text">Rhythm</span> Visualizer</h1>
+
+  <div class="controls">
+    <label class="file-upload">
+      <input type="file" id="audioFile" accept=".wav">
+      <span>📂 Choose WAV File</span>
+    </label>
+    <br><br>
+    <button onclick="playAudio()">▶ Play</button>
+    <button onclick="pauseAudio()">⏸ Pause</button>
+    <button onclick="stopAudio()">⏹ Stop</button>
+    <br><br>
+
+    <div class="container">
+    <!-- Top Stats Section -->
+    <div class="stats">
+      <div class="stat-card beat">
+        <div class="beat-circle" id="beatCircle"></div>
+        <p>Beat Detected</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="bpm">156</h2>
+        <p>BPM (Average)</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="energy">0.0%</h2>
+        <p>Current Energy</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="beats">13</h2>
+        <p>Beats Detected</p>
+      </div>
+    </div>
+
+    <!-- Algorithm Explanation -->
+    <div class="algorithm">
+      <h3>Beat Detection Algorithm</h3>
+      <p>This implementation uses an energy-based beat detection algorithm that analyzes audio in real-time:</p>
+      <ol>
+        <li><strong>Energy Calculation:</strong> Computes the instantaneous energy of the audio signal by summing the squares of frequency bin magnitudes from the FFT analysis.</li>
+        <li><strong>Moving Average:</strong> Maintains a rolling average of recent energy values to establish a baseline energy level.</li>
+        <li><strong>Peak Detection:</strong> Identifies beats when the current energy exceeds the moving average by a threshold factor (sensitivity), with temporal constraints to prevent false positives from rapid fluctuations.</li>
+        <li><strong>BPM Estimation:</strong> Calculates beats per minute by tracking the time intervals between detected beats and averaging over recent detections.</li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="visualizer.js"></script>
+</body>
+</html>
